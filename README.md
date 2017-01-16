@@ -8,7 +8,7 @@ TODO : Please provide a detailed project description.
 
 ## Web Site
 
-[IS 2560 Web](https://project2560.herokuapp.com/)
+[Website Name TBD](https://project2560.herokuapp.com/)
 
 ## Key Features
 
