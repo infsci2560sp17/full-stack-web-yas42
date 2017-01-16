@@ -4,7 +4,7 @@ TODO : Please provide a detailed project description.
 
 ## Build status
 
-[![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web)
+[![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-yas42.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-yas42)
 
 ## Web Site
 
