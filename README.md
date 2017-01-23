@@ -1,10 +1,12 @@
-# TODO : Your Project Name
+# TODO : YAS42 TBD
 
 TODO : Please provide a detailed project description.
 
 ## Build status
 
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-yas42.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-yas42)
+
+## Changelog
 
 ## Web Site
 
