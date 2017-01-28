@@ -10,6 +10,10 @@ TODO : Please provide a detailed project description.
 
 [website Name TBD](https://project2560.herokuapp.com/)
 
+## Changelog
+
+[Changelog](CHANGELOG.md)
+
 ## Key Features
 
 TODO : Please list key features of your project.
