@@ -1,6 +1,24 @@
-# TODO : YAS42 TBD
+# NFL Highlight Reel
 
-TODO : Please provide a detailed project description.
+1. What is the proposed name for your Web application?
+    -NFL Highlight Reel
+2. Who is the target audience for your Web application?
+    -NFL fans that wants to watch the replay of their favorite games or highlights of their favorite 
+    teams and players.
+3. What problem is it intended to solve for the target audience?
+    -By developing this website, I want to create a Sports bar kind of environment for all the target 
+    audience (NFL fans) to watch their teams and players and have friendly conversation with other 
+    fans about football. Other features like team stats or star player stats could be include in this 
+    website as well if there’s enough time to do so. 
+4. How will it meet the minimum project requirements?
+    -All of the game/ player highlights will be accessible to the public. But in order to comment or 
+    having a discussion with other users, a login will be required which will be stored in my 
+    database. My site will also support OAuth2 authentication for users don’t want to register in my 
+    site. The registered user will have the freedom of changing their password, open a new post, modify their old post,
+    or delete their old post. All post will also have an upvote/ downvote 
+    option. All public data will be accessible through RESTful services. 
+5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
+
 
 ## Build status
 
