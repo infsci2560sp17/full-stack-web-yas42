@@ -18,6 +18,10 @@
     or delete their old post. All post will also have an upvote/ downvote 
     option. All public data will be accessible through RESTful services. 
 5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
+    - The purpose of my site is to bring the fans the one of a kind friendly “Sports bar” environment 
+    to the Internet community. I will closely monitor their comment to minimize the negative, harsh 
+    posts or comments in my community. If possible, with the game highlight and game stats, I am 
+    looking forward to bring the user a whole new way of viewing NFL highlights. 
 
 
 ## Build status
@@ -26,7 +30,7 @@
 
 ## Web Site
 
-[website Name TBD](https://project2560.herokuapp.com/)
+[NFL Highlight Reel](https://project2560.herokuapp.com/)
 
 ## Changelog
 
