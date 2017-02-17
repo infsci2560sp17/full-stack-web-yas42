@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>House of Highlights</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s NFL Highlight's!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Highlight Type</th>
+                </tr>                
+                <tr data-th-each="highlight : ${highlights}">
+                    <td data-th-text="${highlight.id}"></td>
+                    <td data-th-text="${highlight.title}"></td>
+                    <td data-th-text="${highlight.videoType}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add DVD<br />
+        <form data-th-action="@{/highlights/add}" name="addHighlightForm" method="post">
+            Title: <input type="text" name="title" /><br />
+            Workout Type:<br />
+            <input type="radio" name="videoType" value="Highlight" checked="checked" /> Highlight<br />
+            <input type="radio" name="videoType" value="Replay" /> Replay<br />
+            <input type="radio" name="videoType" value="Documentary" /> Documentary<br />
+            <input type="radio" name="videoType" value="Other" /> Other<br />
+            <input type="submit" value="Add Highlight"/>
+        </form>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
