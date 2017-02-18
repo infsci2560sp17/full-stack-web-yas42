@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Home</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s NFL Films!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Video Type</th>
+                </tr>                
+                <tr data-th-each="movie : ${movie}">
+                    <td data-th-text="${movie.id}"></td>
+                    <td data-th-text="${movie.title}"></td>
+                    <td data-th-text="${movie.videoType}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add Videos<br />
+        <form data-th-action="@{/movie/add}" name="addMovieForm" method="post">
+            Title: <input type="text" name="title" /><br />
+            Video Type:<br />
+            <input type="radio" name="workoutType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="workoutType" value="Highlight" /> Highlight<br />
+            <input type="radio" name="workoutType" value="Replay" /> Replay<br />
+            <input type="radio" name="workoutType" value="Documentary" /> Documentary<br />
+            <input type="submit" value="Add Workout"/>
+        </form>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
