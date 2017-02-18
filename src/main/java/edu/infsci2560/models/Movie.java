@@ -22,7 +22,7 @@ public class Movie {
     private static final long serialVersionUID = 1L;
 
     public enum VideoType {
-        Unknown,
+        Other,
         Highlight,
         Replay,
         Documentary
@@ -37,7 +37,7 @@ public class Movie {
     public Movie() {
         this.id = Long.MAX_VALUE;
         this.title = null;
-        this.videoType = VideoType.Unknown;
+        this.videoType = VideoType.Other;
     }
 
     public Movie(Long id, String name, VideoType videoType) {
