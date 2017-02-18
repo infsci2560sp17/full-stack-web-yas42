@@ -5,8 +5,8 @@
  */
 package edu.infsci2560.controllers;
 
-import edu.infsci2560.models.Dvd;
-import edu.infsci2560.repositories.DvdRepository;
+import edu.infsci2560.models.Highlight;
+import edu.infsci2560.repositories.HighlightRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -22,22 +22,22 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
- * @author kolobj
+ * @author Yang Sun
  */
 @Controller
-public class DvdsController {
+public class HighlightController {
     @Autowired
-    private DvdRepository repository;
+    private HighlightRepository repository;
     
-    @RequestMapping(value = "dvds", method = RequestMethod.GET)
+    @RequestMapping(value = "highlight", method = RequestMethod.GET)
     public ModelAndView index() {        
-        return new ModelAndView("dvds", "dvds", repository.findAll());
+        return new ModelAndView("highlight", "highlight", repository.findAll());
     }
     
-    @RequestMapping(value = "dvds/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView create(@ModelAttribute @Valid Dvd dvd, BindingResult result) {
-        repository.save(dvd);
-        return new ModelAndView("dvds", "dvds", repository.findAll());
+    @RequestMapping(value = "highlight/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public ModelAndView create(@ModelAttribute @Valid Highlight highlight, BindingResult result) {
+        repository.save(highlight);
+        return new ModelAndView("highlight", "highlight", repository.findAll());
     }
     
 }

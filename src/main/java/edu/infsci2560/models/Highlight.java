@@ -14,41 +14,41 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *
- * @author kolobj
+ * @author Yang Sun
  */
 @Entity
-public class Dvd {
+public class Highlight {
 
     private static final long serialVersionUID = 1L;
 
-    public enum WorkoutType {
-        Unknown,
-        Strength,
-        Cardio,
-        CrossTrain
+    public enum VideoType {
+        Highlight,
+        Replay,
+        Documentary,
+        Other
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String title;
-    protected WorkoutType workoutType;
+    protected VideoType videoType;
 
-    public Dvd() {
+    public Highlight() {
         this.id = Long.MAX_VALUE;
         this.title = null;
-        this.workoutType = WorkoutType.Unknown;
+        this.videoType = VideoType.Other;
     }
 
-    public Dvd(Long id, String name, WorkoutType workoutType) {
+    public Highlight(Long id, String name, VideoType videoType) {
         this.id = id;
         this.title = name;
-        this.workoutType = workoutType;
+        this.videoType = videoType;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.workoutType + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", videoType=" + this.videoType + " ]";
     }
 
     @Override
@@ -76,17 +76,17 @@ public class Dvd {
     }
 
     /**
-     * @return the workoutType
+     * @return the videoType
      */
-    public WorkoutType getWorkoutType() {
-        return workoutType;
+    public VideoType getVideoType() {
+        return videoType;
     }
 
     /**
-     * @param workoutType the workoutType to set
+     * @param videoType the videoType to set
      */
-    public void setWorkoutType(WorkoutType workoutType) {
-        this.workoutType = workoutType;
+    public void setVideoType(VideoType videoType) {
+        this.videoType = videoType;
     }
 
     /**
