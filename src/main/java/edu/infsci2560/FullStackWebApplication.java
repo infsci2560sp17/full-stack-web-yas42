@@ -1,8 +1,8 @@
 package edu.infsci2560;
 
-import edu.infsci2560.models.Movie;
-import edu.infsci2560.models.Movie.VideoType;
-import edu.infsci2560.repositories.MovieRepository;
+import edu.infsci2560.models.Dvd;
+import edu.infsci2560.models.Dvd.WorkoutType;
+import edu.infsci2560.repositories.DvdRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,10 +19,10 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        MovieRepository repository = ctx.getBean(MovieRepository.class);
-        repository.save(new Movie(1L, "Super Bowl 49", VideoType.Replay));
-        repository.save(new Movie(2L, "Beast Mode", VideoType.Highlight));
-        repository.save(new Movie(3L, "Brady Six", VideoType.Documentary));
+        DvdRepository repository = ctx.getBean(DvdRepository.class);
+        repository.save(new Dvd(1L, "P90X", WorkoutType.CrossTrain));
+        repository.save(new Dvd(2L, "Insanity", WorkoutType.Cardio));
+        repository.save(new Dvd(3L, "Body Beast", WorkoutType.Strength));
     }
 
 
