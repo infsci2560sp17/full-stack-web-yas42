@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title></title>
+</head>
+<body>
+
+</body><!DOCTYPE html>
+<html>
     <head>
         <title>House of Highlights</title>
     </head>
@@ -13,7 +20,7 @@
                     <th>Name</th>
                     <th>Highlight Type</th>
                 </tr>                
-                <tr data-th-each="highlight : ${highlights}">
+                <tr data-th-each="highlight : ${highlight}">
                     <td data-th-text="${highlight.id}"></td>
                     <td data-th-text="${highlight.title}"></td>
                     <td data-th-text="${highlight.videoType}"></td>
@@ -23,7 +30,7 @@
         
         <hr />
         Add Highlight Video<br />
-        <form data-th-action="@{/highlights/add}" name="addHighlightForm" method="post">
+        <form data-th-action="@{/highlight/add}" name="addHighlightForm" method="post">
             Title: <input type="text" name="title" /><br />
             Workout Type:<br />
             <input type="radio" name="videoType" value="Highlight" checked="checked" /> Highlight<br />

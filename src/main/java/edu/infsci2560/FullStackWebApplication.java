@@ -1,8 +1,8 @@
 package edu.infsci2560;
 
-import edu.infsci2560.models.Highlight;
-import edu.infsci2560.models.Highlight.VideoType;
-import edu.infsci2560.repositories.HighlightRepository;
+import edu.infsci2560.models.Movie;
+import edu.infsci2560.models.Movie.VideoType;
+import edu.infsci2560.repositories.MovieRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,10 +19,10 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        HighlightRepository repository = ctx.getBean(HighlightRepository.class);
-        repository.save(new Highlight(1L, "Super Bowl 49", VideoType.Replay));
-        repository.save(new Highlight(2L, "Beast Mode", VideoType.Highlight));
-        repository.save(new Highlight(3L, "Brady Six", VideoType.Documentary));
+        MovieRepository repository = ctx.getBean(MovieRepository.class);
+        repository.save(new Movie(1L, "Super Bowl 49", VideoType.Replay));
+        repository.save(new Movie(2L, "Beast Mode", VideoType.Highlight));
+        repository.save(new Movie(3L, "Brady Six", VideoType.Documentary));
     }
 
 

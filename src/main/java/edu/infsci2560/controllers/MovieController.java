@@ -5,8 +5,8 @@
  */
 package edu.infsci2560.controllers;
 
-import edu.infsci2560.models.Highlight;
-import edu.infsci2560.repositories.HighlightRepository;
+import edu.infsci2560.models.Movie;
+import edu.infsci2560.repositories.MovieRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -22,22 +22,22 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
- * @author Yang Sun
+ * @author Ysun
  */
 @Controller
-public class HighlightController {
+public class MovieController {
     @Autowired
-    private HighlightRepository repository;
+    private MovieRepository repository;
     
-    @RequestMapping(value = "highlight", method = RequestMethod.GET)
+    @RequestMapping(value = "movie", method = RequestMethod.GET)
     public ModelAndView index() {        
-        return new ModelAndView("highlight", "highlight", repository.findAll());
+        return new ModelAndView("movie", "movie", repository.findAll());
     }
     
-    @RequestMapping(value = "highlight/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView create(@ModelAttribute @Valid Highlight highlight, BindingResult result) {
-        repository.save(highlight);
-        return new ModelAndView("highlight", "highlight", repository.findAll());
+    @RequestMapping(value = "movie/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public ModelAndView create(@ModelAttribute @Valid Movie movie, BindingResult result) {
+        repository.save(movie);
+        return new ModelAndView("movie", "movie", repository.findAll());
     }
     
 }

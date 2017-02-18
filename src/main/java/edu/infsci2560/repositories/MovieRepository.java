@@ -5,11 +5,11 @@
  */
 package edu.infsci2560.repositories;
 
-import edu.infsci2560.models.Highlight;
+import edu.infsci2560.models.Movie;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
  *
- * @author Yang Sun
+ * @author Ysun
  */
-public interface HighlightRepository extends PagingAndSortingRepository<Highlight, Long> {}
+public interface MovieRepository extends PagingAndSortingRepository<Movie, Long> {}

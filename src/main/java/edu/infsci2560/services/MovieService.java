@@ -5,9 +5,9 @@
  */
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.Highlight;
-import edu.infsci2560.models.Highlight.VideoType;
-import edu.infsci2560.repositories.HighlightRepository;
+import edu.infsci2560.models.Movie;
+import edu.infsci2560.models.Movie.VideoType;
+import edu.infsci2560.repositories.MovieRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,30 +25,30 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
- * @author Yang Sun
+ * @author Ysun
  */
 @RestController
-@RequestMapping("/public/api/highlight")
-public class HighlightService {
+@RequestMapping("/public/api/movie")
+public class MovieService {
 
     @Autowired
-    private HighlightRepository repository;
+    private MovieRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<Highlight>> list() {
+    public ResponseEntity<Iterable<Movie>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Highlight> list(@PathVariable("id") Long id) {
+    public ResponseEntity<Movie> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Highlight> create(@RequestBody Highlight highlight) {
+    public ResponseEntity<Movie> create(@RequestBody Movie movie) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(highlight), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(movie), headers, HttpStatus.OK);
     }
 }
