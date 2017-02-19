@@ -13,7 +13,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - 2 Key Features
     - Landing Page details and screenshot
     - User Input Form details and screenshot
-
 - New files in src folder
     - Create an Entity, (src/main/java/edu.infsci2560/models/Movie.java)
     - Create a Repository, (src/main/java/edu.infsci2560/repositories/MovieRepository.java)
@@ -25,11 +24,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Modified in README.md
     - What is the proposed name for your Web application?
         Change to "House of Highlight"
-
 - Changed files in src folder
     - Modified landing page, (src/main/resources/templates//home.html)      
     
-
 ## [v1.2] - 2017-01-28
 ### Added
 - Answered in README.md
