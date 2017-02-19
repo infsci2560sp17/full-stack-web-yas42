@@ -46,12 +46,13 @@
 
 ### Landing Page
 
-Simple Landing Page shows the users what content they will be able to see and to login.[](/Screenshots/landing.JPG)
+Simple Landing Page shows the users what content they will be able to see and to login.
+![](/Screenshots/landing.JPG)
 
 ### User Input Form
 
 My User Input Form have 3 catagories, Film ID, Name and Film Type. Film 1,2,3 are in the system as default, while I added film 4, 5, 6 with success. 
-[](/Screenshots/UIF.JPG)
+![](/Screenshots/UIF.JPG)
 
 ## API
 
