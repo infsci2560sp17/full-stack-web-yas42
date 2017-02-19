@@ -38,8 +38,6 @@
 
 ## Key Features
 
-TODO : Please list key features of your project.
-
 * Enables users login
 * Enables users to add their highlight film to the database
 * Key Feature 3
@@ -52,7 +50,8 @@ TODO : please provide a description of your landing page inluding a screen shot 
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+My User Input Form have 3 catagories, Film ID, Name and Film Type. Film 1,2,3 are in the system as default, while I added film 4, 5, 6 with success. 
+[](https://.../image.jpg)
 
 ## API
 
