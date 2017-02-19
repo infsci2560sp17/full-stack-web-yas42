@@ -25,6 +25,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - What is the proposed name for your Web application?
         Change to "House of Highlight"
 - Changed files in src folder
+    - Modified FullStackWebApplication, (src/main/java/edu.infsci2560/FullStackWebApplication.java)
+    - Modified MvcConfig, (src/main/java/edu.infsci2560/MvcConfig.java)
     - Modified landing page, (src/main/resources/templates//home.html)      
     
 ## [v1.2] - 2017-01-28
