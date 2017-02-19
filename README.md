@@ -1,7 +1,7 @@
-# NFL Highlight Reel
+# House of Highlight
 
 1. What is the proposed name for your Web application?
-    - NFL Highlight Reel
+    - House of Highlight
 2. Who is the target audience for your Web application?
     - NFL fans that wants to watch the replay of their favorite games or highlights of their favorite 
     teams and players.
@@ -30,7 +30,7 @@
 
 ## Web Site
 
-[NFL Highlight Reel](https://project2560.herokuapp.com/)
+[House of Highlight](https://project2560.herokuapp.com/)
 
 ## Changelog
 
@@ -40,9 +40,9 @@
 
 TODO : Please list key features of your project.
 
-* Key Feature 1
-* Key Feature 2
-* Key Feature N
+* Enables users login
+* Enables users to add their highlight film to the database
+* Key Feature 3
 
 ## Project Details
 

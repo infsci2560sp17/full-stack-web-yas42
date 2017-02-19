@@ -7,6 +7,29 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
+## [v1.3] - 2017-02-18
+### Added
+- Answered in README.md
+    - 2 Key Features
+    - Landing Page details and screenshot
+    - User Input Form details and screenshot
+
+- New files in src folder
+    - Create an Entity, (src/main/java/edu.infsci2560/models/Movie.java)
+    - Create a Repository, (src/main/java/edu.infsci2560/repositories/MovieRepository.java)
+    - Create a RESTful web service and return JSON, (src/main/java/edu.infsci2560/services/MovieService.java)
+    - Create a MVC Controller and implement get and post methods, (src/main/java/edu.infsci2560/controllers/MovieController.java)
+    - Create a MVC Page and wire it to your Repository, (src/main/resources/templates//movie.html)
+
+### Modified
+- Modified in README.md
+    - What is the proposed name for your Web application?
+        Change to "House of Highlight"
+
+- Changed files in src folder
+    - Modified landing page, (src/main/resources/templates//home.html)      
+    
+
 ## [v1.2] - 2017-01-28
 ### Added
 - Answered in README.md
