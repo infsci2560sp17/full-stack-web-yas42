@@ -46,12 +46,12 @@
 
 ### Landing Page
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+Simple Landing Page shows the users what content they will be able to see.[](https://github.com/infsci2560sp17/full-stack-web-yas42/blob/master/Screenshots/landing.JPG)
 
 ### User Input Form
 
 My User Input Form have 3 catagories, Film ID, Name and Film Type. Film 1,2,3 are in the system as default, while I added film 4, 5, 6 with success. 
-[](https://.../image.jpg)
+[](https://github.com/infsci2560sp17/full-stack-web-yas42/blob/master/Screenshots/UIF.JPG)
 
 ## API
 
