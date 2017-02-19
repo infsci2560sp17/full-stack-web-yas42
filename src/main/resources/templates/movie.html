@@ -19,11 +19,54 @@
         h1 {
         color: #194d19;
         }
+        
+        body, html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: #f2f2f2;
+        }
+
+        .container {
+        width: 100%;
+        height: 100%;
+        }
+
+        .leftpane {
+        width: 30%;
+        height: 100%;
+        float: left;
+        border-collapse: collapse;
+        }
+
+        .middlepane {
+        width: 35%;
+        height: 100%;
+        float: left;
+        border-collapse: collapse;
+        }
+
+        .rightpane {
+        width: 35%;
+        height: 100%;
+        position: relative;
+        float: right;
+        border-collapse: collapse;
+        }
+        
+        .toppane {
+        width: 100%;
+        height: 50px;
+        border-collapse: collapse;
+        }
         </style>
     </head>
     <body>
+    <div class = "toppane">
         <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s NFL Films</h1>
-
+    </div>
+    
+    <div class = "leftpane">
         <div>
             <table style="border: 1px solid black">
                 <tr>
@@ -39,12 +82,12 @@
             </table>
         </div>
         
-        <hr />
-
-        <font size="+1"><b>Add Films</b></font><br />
+        
+        <fieldset>
+        <legend><font size="+1"><b>Add Films</b></font></legend>
         <form data-th-action="@{/movie/add}" name="addMovieForm" method="post">
             Title: <input type="text" name="title" /><br />
-            <br />
+            
             Film Type:
             <select id="Film Type" name="videoType">
             <option value = "Highlight">Highlight</option>
@@ -53,13 +96,14 @@
             <option value = "Other">Other</option>
             </select>
             <br />
-            
+     
             <input type="submit" value="Add Film"/>
         </form>
-        
+        </fieldset>
         <hr />       
         <form data-th-action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
+        </div>
     </body>
 </html>
