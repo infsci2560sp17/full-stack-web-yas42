@@ -33,25 +33,25 @@ public class Player {
     protected Long id;
     protected String name;
     protected String team;
-    protected PlayerLevel pLevel;
+    protected PlayerLevel level;
 
     public Player() {
         this.id = Long.MAX_VALUE;
         this.name = null;
         this.team = null;
-        this.pLevel = PlayerLevel.Other;
+        this.level = PlayerLevel.Other;
     }
 
-    public Player(Long id, String name, String team, PlayerLevel pLevel) {
+    public Player(Long id, String name, String team, PlayerLevel level) {
         this.id = id;
         this.name = name;
         this.team = team;
-        this.pLevel = pLevel;
+        this.level = level;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", name=" + this.name + ", team=" + this.team + ", Player Level=" + this.pLevel + " ]";
+        return "[ id=" + this.id + ", name=" + this.name + ", team=" + this.team + ", Player Level=" + this.level + " ]";
     }
 
     @Override
@@ -93,17 +93,17 @@ public class Player {
     }
     
     /**
-     * @return the pLevel
+     * @return the level
      */
     public PlayerLevel getPlayerLevel() {
-        return pLevel;
+        return level;
     }
 
     /**
-     * @param pLevel the PlayerLevel to set
+     * @param level the PlayerLevel to set
      */
-    public void setPlayerLevel(PlayerLevel pLevel) {
-        this.pLevel = pLevel;
+    public void setPlayerLevel(PlayerLevel level) {
+        this.level = level;
     }
 
     /**
