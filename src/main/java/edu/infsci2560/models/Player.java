@@ -19,8 +19,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Entity
 public class Player {
 
-    private static final long serialVersionUID = 1L;
 
+    private static final long serialVersionUID = 1L;
+    
     public enum PlayerLevel {
         NFL,
         CFL,
