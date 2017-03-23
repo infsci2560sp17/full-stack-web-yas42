@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Key Players</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s key players</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Player Name</th>
+                    <th>Current Team</th>
+                    <th>Player Level</th>
+                </tr>                
+                <tr data-th-each="player : ${player}">
+                    <td data-th-text="${player.id}"></td>
+                    <td data-th-text="${player.name}"></td>
+                    <td data-th-text="${player.team}"></td>
+                    <td data-th-text="${player.pLevel}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add key player to watch<br />
+        <form data-th-action="@{/player/add}" name="addPlayerForm" method="post">
+            Name: <input type="text" name="name" /><br />
+            Team: <input type="text" name="team" /><br />
+            Player Level:<br />
+            <input type="radio" name="pLevel" value="NFL" checked="checked" /> NFL<br />
+            <input type="radio" name="pLevel" value="CFL" /> CFL<br />
+            <input type="radio" name="pLevel" value="College" /> College<br />
+            <input type="radio" name="pLevel" value="Other" /> Other<br />
+            <input type="submit" value="Add Player"/>
+        </form>
+        
+        <hr />
+            <a data-th-href="@{/files}">Upload a File</a>
+        <hr />
+        
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>

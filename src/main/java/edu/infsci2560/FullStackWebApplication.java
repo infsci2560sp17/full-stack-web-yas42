@@ -3,6 +3,9 @@ package edu.infsci2560;
 import edu.infsci2560.models.Movie;
 import edu.infsci2560.models.Movie.VideoType;
 import edu.infsci2560.repositories.MovieRepository;
+import edu.infsci2560.models.Player;
+import edu.infsci2560.models.Player.PlayerLevel;
+import edu.infsci2560.repositories.PlayerRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,11 +21,18 @@ public class FullStackWebApplication {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
+        
+        // Movies Repo
+        MovieRepository mRepository = ctx.getBean(MovieRepository.class);
+        mRepository.save(new Movie(1L, "Top 10 Catches of OBJ", VideoType.Highlight));
+        mRepository.save(new Movie(2L, "Super Bowl 49", VideoType.Replay));
+        mRepository.save(new Movie(3L, "Do your job", VideoType.Documentary));
+        
+        // Player Repo
+        PlayerRepository pRepository = ctx.getBean(PlayerRepository.class);
+        pRepository.save(new Player(1L, "Carson Wentz","Philadelphia Eagles", PlayerLevel.NFL));
+        pRepository.save(new Player(2L, "Mike Williams", "Clemson", PlayerLevel.College));
 
-        MovieRepository repository = ctx.getBean(MovieRepository.class);
-        repository.save(new Movie(1L, "Top 10 Catches of OBJ", VideoType.Highlight));
-        repository.save(new Movie(2L, "Super Bowl 49", VideoType.Replay));
-        repository.save(new Movie(3L, "Do your job", VideoType.Documentary));
     }
 
 
