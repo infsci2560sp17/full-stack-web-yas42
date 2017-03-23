@@ -6,7 +6,7 @@
 package edu.infsci2560.controllers;
 
 import edu.infsci2560.models.Player;
-import edu.infsci2560.repositories.MovieRepository;
+import edu.infsci2560.repositories.PlayerRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -27,7 +27,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PlayerController {
     @Autowired
-    private MovieRepository repository;
+    private PlayerRepository repository;
     
     @RequestMapping(value = "player", method = RequestMethod.GET)
     public ModelAndView index() {        
