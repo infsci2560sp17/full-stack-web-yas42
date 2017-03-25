@@ -14,13 +14,22 @@
         text-align: center;
         }
         
-    
+        .bgimg {
+                background-image: url('http://web-vassets.ea.com/Assets/Richmedia/Image/Backgrounds/madden-nfl-07-small-bg-1366x650.jpg');
+            
+                min-height: 100%;
+                background-position: center;
+                background-size: cover;
+        }
+        
     </Style>
     
     <body>
+        <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
         <h1>Welcome To The House of Highlight!</h1>
         <h3> The one place to watch all the NFL films </h3>
         <p>Click <a data-th-href="@{/player}">here</a> to add your players to watch.</p>
         <p>Click <a data-th-href="@{/movie}">here</a> to select your films.</p>
+        </div>
     </body>
 </html>
