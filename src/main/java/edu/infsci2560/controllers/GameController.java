@@ -42,7 +42,6 @@ public class GameController {
     
     @RequestMapping(value = "game/delete", method = RequestMethod.DELETE)
     public ModelAndView delete(){
-        
         return new ModelAndView("game", "game", repository.findAll());
     }
 }
