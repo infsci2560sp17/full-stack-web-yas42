@@ -6,6 +6,8 @@ import edu.infsci2560.repositories.MovieRepository;
 import edu.infsci2560.models.Player;
 import edu.infsci2560.models.Player.PlayerLevel;
 import edu.infsci2560.repositories.PlayerRepository;
+import edu.infsci2560.models.Game;
+import edu.infsci2560.repositories.GameRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +35,9 @@ public class FullStackWebApplication {
         pRepository.save(new Player(1L, "Carson Wentz","Philadelphia Eagles", PlayerLevel.NFL));
         pRepository.save(new Player(2L, "Mike Williams", "Clemson", PlayerLevel.College));
 
+        // Game Repo
+        GameRepository gRepository = ctx.getBean(GameRepository.class);
+        gRepository.save(new Game(1L, "Philadelphia Eagles","Dallas Cowboys", 2016L, "Eagles finished the season strong"));
     }
 
 
