@@ -50,4 +50,10 @@ public class GameService {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.save(game), headers, HttpStatus.OK);
     }
+    
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
+	public ResponseEntity<Game> delete(@PathVariable("id") Long id) {
+        HttpHeaders headers = new HttpHeaders();
+        return new ResponseEntity<>(repository.delete(id),headers, HttpStatus.OK);
+    }
 }
