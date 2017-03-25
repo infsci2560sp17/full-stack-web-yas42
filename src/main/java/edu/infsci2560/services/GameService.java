@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -51,9 +52,9 @@ public class GameService {
         return new ResponseEntity<>(repository.save(game), headers, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
-	public ResponseEntity<Game> delete(@PathVariable("id") Long id) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.delete(id),headers, HttpStatus.OK);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable("id") long id) {
+        repository.delete(id);
     }
 }
