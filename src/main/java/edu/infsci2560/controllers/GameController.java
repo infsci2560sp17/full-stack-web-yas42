@@ -42,7 +42,7 @@ public class GameController {
         return new ModelAndView("game", "game", repository.findAll());
     }
     
-    @RequestMapping(value = "game/delete", method = RequestMethod.DELETE)
+    @RequestMapping(value = "game/delete", method = RequestMethod.GET)
     public ModelAndView deleteGame(@RequestParam(value = "id", required=true) Long id) {
         Game game = repository.findOne(id);
         
