@@ -23,22 +23,22 @@ public class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long gid;
+    protected Long id;
     protected String home;
     protected String away;
     protected Long season;
     protected String comment;
 
     public Game() {
-        this.gid = Long.MAX_VALUE;
+        this.id = Long.MAX_VALUE;
         this.home = null;
         this.away = null;
         this.season = Long.MAX_VALUE;
         this.comment = null;
     }
 
-    public Game(Long gid, String home, String away, long season, String comment) {
-        this.gid = gid;
+    public Game(Long id, String home, String away, long season, String comment) {
+        this.id = id;
         this.home = home;
         this.away = away;
         this.season = season;
@@ -47,7 +47,7 @@ public class Game {
 
     @Override
     public String toString() {
-        return "[ gid=" + this.gid + ", home=" + this.home + ", away=" + this.away + ", season=" + this.season + ", comment=" + this.comment + " ]";
+        return "[ id=" + this.id + ", home=" + this.home + ", away=" + this.away + ", season=" + this.season + ", comment=" + this.comment + " ]";
     }
 
     @Override
@@ -119,15 +119,15 @@ public class Game {
     /**
      * @return the id
      */
-    public Long getGId() {
-        return gid;
+    public Long getId() {
+        return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setGId(Long gid) {
-        this.gid = gid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
 }

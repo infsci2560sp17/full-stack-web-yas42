@@ -40,10 +40,10 @@ public class MovieService {
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/{mid}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Movie> list(@PathVariable("mid") Long mid) {
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<Movie> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.findOne(mid), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
