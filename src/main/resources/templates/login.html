@@ -66,15 +66,16 @@ span.psw {
 </style>
 <body>
 
-<h2>User Login</h2>
-
-<form data-th-action="@{/login}" method="post">
-  <div data-th-if="${param.error}">
+<h2><div data-th-if="${param.error}">
     Invalid username and password.
   </div>
   <div data-th-if="${param.logout}">
     You have been logged out.
   </div>  
+</h2>
+
+<form data-th-action="@{/login}" method="post">
+  
   <div class="container">
     <div><label><b>User Name</b>
     <input type="text" placeholder="Enter Username" name="username"/></label></div>
