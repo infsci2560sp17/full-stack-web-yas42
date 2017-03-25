@@ -15,7 +15,7 @@
         }
         
         .bgimg {
-                background-image: url('http://web-vassets.ea.com/Assets/Richmedia/Image/Backgrounds/madden-nfl-07-small-bg-1366x650.jpg');
+                background-image: url('http://lpcdn.net/content/51/img/bg-1-1398569972.png');
             
                 min-height: 100%;
                 background-position: center;
@@ -26,11 +26,13 @@
     
     <body>
         <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-        <h1>Welcome To The House of Highlight!</h1>
+        <h1 data-th-inline="text">Welcome, [[${#httpServletRequest.remoteUser}]] to the House of Highlight!</h1>
         <h3> The one place to watch all the NFL films </h3>
+        <img src="http://s3.amazonaws.com/rv-wp/directvdealscom/uploads/2015/08/slide21.jpg" alt="Mountain View" style="width:410px;height:280px;">
         <p>Click <a data-th-href="@{/player}">here</a> to add your players to watch.</p>
         <p>Click <a data-th-href="@{/movie}">here</a> to select your films.</p>
-        <p>Click <a data-th-href="@{/game}">here</a> to add your favourite game.</p>
+        <p>Click <a data-th-href="@{/game}">here</a> to add your favourite match ups.</p>
+        <p>Click <a data-th-href="@{/}">here</a> to </p>
         </div>
     </body>
 </html>
