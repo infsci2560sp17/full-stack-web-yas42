@@ -52,9 +52,12 @@ public class GameService {
         return new ResponseEntity<>(repository.save(game), headers, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable("id") long id) {
-        repository.delete(id);
-    }
+//    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+//	@ResponseStatus(HttpStatus.NO_CONTENT)
+//    public void delete(@PathVariable("id") long id) {
+//        repository.delete(id);
+//    }
+
+    //------------------- Delete All Users --------------------------------------------------------
+     
 }

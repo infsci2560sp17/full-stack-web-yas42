@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -42,7 +43,7 @@ public class GameController {
     }
     
     @RequestMapping(value = "game/delete", method = RequestMethod.DELETE)
-    public ModelAndView delete(@RequestParam("game") long id) {
+    public ModelAndView deleteGame(@PathVariable("id") long id) {
         repository.delete(id);
         return new ModelAndView("game", "game", repository.findAll());
     }
