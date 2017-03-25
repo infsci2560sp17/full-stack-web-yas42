@@ -14,7 +14,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-button {
+a.button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -28,7 +28,7 @@ button:hover {
     opacity: 0.8;
 }
 
-.cancelbtn {
+a.cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
@@ -90,7 +90,7 @@ span.psw {
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <button data-th-href="@{/player}" type="button" class="cancelbtn">Cancel </button>
+    <a data-th-href="@{/home}" type="button" class="cancelbtn">Cancel </button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
