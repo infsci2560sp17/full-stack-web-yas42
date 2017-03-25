@@ -40,4 +40,7 @@ public class PlayerController {
         return new ModelAndView("player", "player", repository.findAll());
     }
     
+    // Put method
+    // Delete method
+    
 }
