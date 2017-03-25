@@ -101,13 +101,6 @@
         </form>
         </fieldset>
         <hr />       
-        
-        <form data-th-action="@{/game}" name="deleteGame" method="post">
-            <input type="hidden" value="method" value="DELETE"/>
-            ID: <input type = "number" name = "id"/> <br/>
-            <input type="submit" value="Delete by ID"/>
-        </form>
-        <hr />
       
         <form data-th-action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
