@@ -39,10 +39,10 @@ public class GameService {
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Game> list(@PathVariable("id") Long id) {
+    @RequestMapping(value = "/{gid}", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<Game> list(@PathVariable("gid") Long gid) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.findOne(gid), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")

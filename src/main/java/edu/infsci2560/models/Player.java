@@ -31,20 +31,20 @@ public class Player {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    protected Long pid;
     protected String name;
     protected String team;
     protected PlayerLevel playerLevel;
 
     public Player() {
-        this.id = Long.MAX_VALUE;
+        this.pid = Long.MAX_VALUE;
         this.name = null;
         this.team = null;
         this.playerLevel = PlayerLevel.Other;
     }
 
-    public Player(Long id, String name, String team, PlayerLevel playerLevel) {
-        this.id = id;
+    public Player(Long pid, String name, String team, PlayerLevel playerLevel) {
+        this.pid = pid;
         this.name = name;
         this.team = team;
         this.playerLevel = playerLevel;
@@ -52,7 +52,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", name=" + this.name + ", team=" + this.team + ", Player Level=" + this.playerLevel + " ]";
+        return "[ pid=" + this.pid + ", name=" + this.name + ", team=" + this.team + ", Player Level=" + this.playerLevel + " ]";
     }
 
     @Override
@@ -110,15 +110,15 @@ public class Player {
     /**
      * @return the id
      */
-    public Long getId() {
-        return id;
+    public Long getPId() {
+        return pid;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Long id) {
-        this.id = id;
+    public void setPId(Long pid) {
+        this.pid = pid;
     }
 
 }

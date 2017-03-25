@@ -30,25 +30,25 @@ public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    protected Long mid;
     protected String title;
     protected VideoType videoType;
 
     public Movie() {
-        this.id = Long.MAX_VALUE;
+        this.mid = Long.MAX_VALUE;
         this.title = null;
         this.videoType = VideoType.Other;
     }
 
-    public Movie(Long id, String name, VideoType videoType) {
-        this.id = id;
+    public Movie(Long mid, String name, VideoType videoType) {
+        this.mid = mid;
         this.title = name;
         this.videoType = videoType;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", videoType=" + this.videoType + " ]";
+        return "[ mid=" + this.mid + ", title=" + this.title + ", videoType=" + this.videoType + " ]";
     }
 
     @Override
@@ -92,15 +92,15 @@ public class Movie {
     /**
      * @return the id
      */
-    public Long getId() {
-        return id;
+    public Long getMId() {
+        return mid;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Long id) {
-        this.id = id;
+    public void setMId(Long mid) {
+        this.mid = mid;
     }
 
 }

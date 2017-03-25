@@ -40,10 +40,10 @@ public class PlayerService {
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Player> list(@PathVariable("id") Long id) {
+    @RequestMapping(value = "/{pid}", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<Player> list(@PathVariable("pid") Long pid) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.findOne(pid), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
