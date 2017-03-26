@@ -102,10 +102,13 @@
         </fieldset>
         <hr />       
         
+        <fieldset>
+        <legend><font size="+1"><b>Input the id to delete:</b></font></legend>
         <form data-th-action= "@{/game/delete}" name="deleteSelect" method="delete">
-            Input the id to delete: <input type="number" name="id" /><br />
+            ID: <input type="number" name="id" /><br />
             <input type="submit" value="Delete" />
         </form>
+        </fieldset>
         <hr/>
         
         <form data-th-action="@{/logout}" method="post">
