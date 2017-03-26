@@ -105,12 +105,32 @@
         <fieldset>
         <legend><font size="+1"><b>Input the id to delete:</b></font></legend>
         <form data-th-action= "@{/game/delete}" name="deleteSelect" method="delete">
-            ID: <input type="number" name="id" /><br />
+            ID: <input type="number" name="id" /><br /><br />
+            
             <input type="submit" value="Delete" />
         </form>
         </fieldset>
         <hr/>
         
+        <fieldset>
+        <legend><font size="+1"><b>Modify the saved games</b></font></legend>
+        <form data-th-action="@{/game/put}" name="putGameForm" method="post">
+            
+            ID: <input type="number" name="id" /><br /><br />
+            Home Team: <input type="text" name="home" /><br /><br />
+            Away Team: <input type="text" name="away" /><br /><br />
+            NFL Season: <input type="text" name="season" /><br /><br />
+            Comment: <input type="text" name="comment" /><br /><br />
+     
+            <input type="submit" value="Modify"/>
+        </form>
+        </fieldset>
+        <hr />       
+        
+        <form data-th-action="@{/welcome}" method="post">
+            <input type="submit" value="Go back"/>
+        </form>
+        <br />
         <form data-th-action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
