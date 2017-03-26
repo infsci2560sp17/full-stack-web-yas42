@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>User Comment Page</title>
+        <title>Favourite Games</title>
         <style type="text/css">
         table, td, th {    
         border: 1px solid #ddd;
@@ -64,39 +64,65 @@
     </head>
     <body>
     <div class = "toppane">
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s key players</h1>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Favourite Games</h1>
     </div>
     
     <div class = "leftpane">
         <div>
-           <table style="border: 1px solid black">
+            <table style="border: 1px solid black">
                 <tr>
                     <th>ID</th>
-                    <th>Player Name</th>
-                    <th>Current Team</th>
-                    <th>Player Level</th>
+                    <th>Home Team</th>
+                    <th>Away Team</th>
+                    <th>NFL Season</th>
+                    <th>Comment</th>
                 </tr>                
-                <tr data-th-each="player : ${player}">
-                    <td data-th-text="${player.id}"></td>
-                    <td data-th-text="${player.name}"></td>
-                    <td data-th-text="${player.team}"></td>
-                    <td data-th-text="${player.playerLevel}"></td>
+                <tr data-th-each="game : ${game}">
+                    <td data-th-text="${game.id}"></td>
+                    <td data-th-text="${game.home}"></td>
+                    <td data-th-text="${game.away}"></td>
+                    <td data-th-text="${game.season}"></td>
+                    <td data-th-text="${game.comment}"></td>
                 </tr>
             </table>
         </div>
         
         
         <fieldset>
-        <legend><font size="+1"><b>Add key player to watch</b></font></legend>
-        <form data-th-action="@{/player/add}" name="addPlayerForm" method="post">
-            Name: <input type="text" name="name" /><br /><br />
-            Team: <input type="text" name="team" /><br /><br />
-            Player Level:<br />
-            <input type="radio" name="playerLevel" value="NFL" checked="checked" /> NFL<br />
-            <input type="radio" name="playerLevel" value="CFL" /> CFL<br />
-            <input type="radio" name="playerLevel" value="College" /> College<br />
-            <input type="radio" name="playerLevel" value="Other" /> Other<br />
-            <input type="submit" value="Add Player"/>
+        <legend><font size="+1"><b>Add Your Favourite Games</b></font></legend>
+        <form data-th-action="@{/game/add}" name="addGameForm" method="post">
+            
+            Home Team: <input type="text" name="home" /><br /><br />
+            Away Team: <input type="text" name="away" /><br /><br />
+            NFL Season: <input type="text" name="season" /><br /><br />
+            Comment: <input type="text" name="comment" /><br /><br />
+     
+            <input type="submit" value="Add"/>
+        </form>
+        </fieldset>
+        <hr />       
+        
+        <fieldset>
+        <legend><font size="+1"><b>Input the id to delete:</b></font></legend>
+        <form data-th-action= "@{/game/delete}" name="deleteSelect" method="delete">
+            ID: <input type="number" name="id" /><br /><br />
+            
+            <input type="submit" value="Delete" />
+        </form>
+        </fieldset>
+        <hr/>
+        
+        <fieldset>
+        <legend><font size="+1"><b>Modify the saved games</b></font></legend>
+        <form data-th-action="@{/game/put}" name="putGameForm" method="post">
+            
+            ID: <input type="number" name="id" /><br /><br />
+            Home Team: <input type="text" name="home" /><br /><br />
+            Away Team: <input type="text" name="away" /><br /><br />
+            NFL Season: <input type="text" name="season" /><br /><br />
+            Comment: <input type="text" name="comment" /><br /><br />
+     
+            <input type="submit" value="Modify"/>
         </form>
         </fieldset>
         <hr />       
