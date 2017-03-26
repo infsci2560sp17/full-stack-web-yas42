@@ -8,6 +8,9 @@ import edu.infsci2560.models.Player.PlayerLevel;
 import edu.infsci2560.repositories.PlayerRepository;
 import edu.infsci2560.models.Game;
 import edu.infsci2560.repositories.GameRepository;
+import edu.infsci2560.models.Comment;
+import edu.infsci2560.models.Comment.CommentType;
+import edu.infsci2560.repositories.CommentRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,6 +41,10 @@ public class FullStackWebApplication {
         // Game Repo
         GameRepository gRepository = ctx.getBean(GameRepository.class);
         gRepository.save(new Game(1L, "Philadelphia Eagles","Dallas Cowboys", 2016L, "Eagles finished the season strong"));
+        
+        // Comment Repo
+        CommentRepository cRepository = ctx.getBean(CommentRepository.class);
+        cRepository.save(new Comment(1L, "Fly Eagles Fly", CommentType.Team));
     }
 
 
