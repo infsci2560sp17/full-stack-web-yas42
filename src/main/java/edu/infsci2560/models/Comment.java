@@ -32,24 +32,24 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-    protected String comment;
+    protected String post;
     protected CommentType commentType;
 
     public Comment() {
         this.id = Long.MAX_VALUE;
-        this.comment = null;
+        this.post = null;
         this.commentType = CommentType.Other;
     }
 
-    public Comment(Long id, String comment, CommentType commentType) {
+    public Comment(Long id, String post, CommentType commentType) {
         this.id = id;
-        this.comment = comment;
+        this.post = post;
         this.commentType = commentType;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", comment=" + this.comment + ", commentType=" + this.commentType + " ]";
+        return "[ id=" + this.id + ", post=" + this.post + ", commentType=" + this.commentType + " ]";
     }
 
     @Override
@@ -65,15 +65,15 @@ public class Comment {
     /**
      * @return the name
      */
-    public String getComment() {
-        return comment;
+    public String getPost() {
+        return post;
     }
 
     /**
      * @param comment the name to set
      */
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setPost(String post) {
+        this.post = post;
     }
 
     /**

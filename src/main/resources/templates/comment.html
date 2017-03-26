@@ -78,7 +78,7 @@
                 <tr data-th-each="comment : ${comment}">
                     <td data-th-text="${comment.id}"></td>
                     <td data-th-text="${comment.commentType}"></td>
-                    <td data-th-text="${comment.comment}"></td>
+                    <td data-th-text="${comment.post}"></td>
                 </tr>
             </table>
         </div>
@@ -88,7 +88,7 @@
         <legend><font size="+1"><b>Add Comment</b></font></legend>
         <form data-th-action="@{/comment/add}" name="addCommentForm" method="post">
             
-            Comment: <input type="text" name="comment" /><br />
+            Comment: <input type="text" name="post" /><br />
            
             Film Type:
             <select id="Comment Type" name="CommentType">
