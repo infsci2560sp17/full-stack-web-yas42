@@ -7,6 +7,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
+## [v1.4.0] - 2017-03-25
+### Added
+- New files in src folder
+    - Create 3 new Entity, (Player, Game, Comment)
+    - Create 3 new Repository, (Repo for Player, Game, Comment)
+    - Create 3 new RESTful web service and return JSON, (Service for Player, Game, Comment)
+    - Create 3 new MVC Controller and implement get and post methods, (Controller for Player, Game, Comment)
+    - Create 3 new MVC Page and wire it to your Repository, (html page for Player, Game, Comment)
+    - Game page has delete function but put is still in development
+    - Added welcome page(welcome.html)
+    
+### Modified
+- Changed files in templet folder
+    - Modified home.html
+    - Modified login.html
+    - Modified movie.html 
+
 ## [v1.3] - 2017-02-18
 ### Added
 - Answered in README.md
@@ -44,7 +61,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.3...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.4.0...HEAD
+[v1.4.0]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.3...v1.4.0
 [v1.3]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.2...v1.3
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/...v1.1
