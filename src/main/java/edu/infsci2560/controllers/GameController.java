@@ -55,7 +55,8 @@ public class GameController {
     
     @RequestMapping(value = "/game/put", method = RequestMethod.PUT)
     public ModelAndView updateGame(@RequestParam("id") Long id, @RequestParam("comment") String comment) {
-        repository.findOne(id).setComment(comment);
+        Game game = repository.findOne(id);
+        game.setComment(comment);
 
         return new ModelAndView("game", "game", repository.findAll());
     }
