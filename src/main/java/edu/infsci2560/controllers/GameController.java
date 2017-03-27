@@ -53,12 +53,10 @@ public class GameController {
         return new ModelAndView("game", "game", repository.findAll());
     }
     
-    @RequestMapping(value = "/game/put", method = RequestMethod.PUT)
-    public ModelAndView updateGame(@RequestParam("id") Long id, @RequestParam("comment") String comment) {
-        Game game = repository.findOne(id);
-        game.setComment(comment);
-
-        return new ModelAndView("game", "game", repository.findAll());
-    }
+    @RequestMapping(value = "game/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public String update( @Valid Game game, BindingResult result) {
+        repository.save(game);
+        return "redirect:/game";
+    }        
 
 }
