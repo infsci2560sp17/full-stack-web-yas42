@@ -1,0 +1,13 @@
+<fieldset>
+        <legend><font size="+1"><b>Modify the saved games</b></font></legend>
+        <form data-th-action="@{/game/{id}(id=${game.id})}" data-th-object="${game}" data-th-method="put" role="form">
+            
+            Home Team: <input type="text" name="home" data-th-value="${game.home}" /><br /><br />
+            Away Team: <input type="text" name="away" data-th-value="${game.away}" /><br /><br />
+            NFL Season: <input type="text" name="season" data-th-value="${game.season}" /><br /><br />
+            Comment: <input type="text" name="comment" data-th-value="${game.comment}" /><br /><br />
+     
+            <input type="submit" value="Modify"/>
+        </form>
+        </fieldset>
+        <hr />       
