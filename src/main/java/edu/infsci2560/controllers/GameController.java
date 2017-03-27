@@ -53,6 +53,13 @@ public class GameController {
         return new ModelAndView("game", "game", repository.findAll());
     }
     
+    @RequestMapping(value = "game/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) { 
+        Game game = repository.findOne(id);
+        return new ModelAndView("gameEdit", "game", game);
+    }
+    
+    
     @RequestMapping(value = "game/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public String update( @Valid Game game, BindingResult result) {
         repository.save(game);
