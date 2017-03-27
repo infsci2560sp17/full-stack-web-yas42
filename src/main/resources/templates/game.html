@@ -114,7 +114,7 @@
         
         <fieldset>
         <legend><font size="+1"><b>Modify the saved games</b></font></legend>
-        <form data-th-action="@{/game/{id}(id=${game.id})}" data-th-object="${game}" data-th-method="put" role="form">
+        <form data-th-action="@{/game/{id}}" data-th-object="${game}" data-th-method="put" role="form">
             
             Home Team: <input type="text" name="home" data-th-value="${game.home}" /><br /><br />
             Away Team: <input type="text" name="away" data-th-value="${game.away}" /><br /><br />
