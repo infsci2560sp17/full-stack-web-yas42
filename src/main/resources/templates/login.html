@@ -5,6 +5,13 @@ form {
     border: 3px solid #f1f1f1;
 }
 
+.bgimg {
+background-image: url('http://web-vassets.ea.com/Assets/Richmedia/Image/Backgrounds/madden-nfl-07-small-bg-1366x650.jpg');
+min-height: 100%;
+background-position: center;
+background-size: cover;
+}
+
 .login-card {
   padding: 40px;
   width: 300px;
@@ -75,6 +82,7 @@ span.psw {
 }
 </style>
 <body>
+<div class="bgimg">
 <div class = "login-card">
 <h2>
     <div>User Login</div>
@@ -104,6 +112,7 @@ span.psw {
   </div>
   <div data-th-if="${param.logout}">
     You have been logged out.
+  </div>
   </div>  
 </div>
 </body>
