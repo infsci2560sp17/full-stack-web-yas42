@@ -33,6 +33,9 @@
         <p>Click <a data-th-href="@{/movie}">here</a> to select your films.</p>
         <p>Click <a data-th-href="@{/game}">here</a> to add your favourite match ups.</p>
         <p>Click <a data-th-href="@{/comment}">here</a> to share your thoughts.</p>
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
         </div>
     </body>
 </html>
