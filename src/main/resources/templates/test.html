@@ -61,7 +61,9 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a data-th-href="@{/logout}">Logout</a>
+                        <form data-th-action="@{/logout}" method="post">
+                            <input type="submit" value="Sign Out"/>
+                        </form>
                     </li>
                 </ul>
             </div>
