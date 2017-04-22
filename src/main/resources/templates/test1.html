@@ -119,47 +119,49 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Main Menu</a>
-                        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s key players</h1>
-                        <div class = "leftpane">
+                        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Comments</h1>
+                       <div class = "leftpane">
         <div>
-           <table style="border: 1px solid black">
+            <table style="border: 1px solid black">
                 <tr>
                     <th>ID</th>
-                    <th>Player Name</th>
-                    <th>Current Team</th>
-                    <th>Player Level</th>
+                    <th>Comment type</th>
+                    <th>Comment</th>
                 </tr>                
-                <tr data-th-each="player : ${player}">
-                    <td data-th-text="${player.id}"></td>
-                    <td data-th-text="${player.name}"></td>
-                    <td data-th-text="${player.team}"></td>
-                    <td data-th-text="${player.playerLevel}"></td>
+                <tr data-th-each="comment : ${comment}">
+                    <td data-th-text="${comment.id}"></td>
+                    <td data-th-text="${comment.commentType}"></td>
+                    <td data-th-text="${comment.post}"></td>
                 </tr>
             </table>
         </div>
         
         
         <fieldset>
-        <legend><font size="+1"><b>Add key player to watch</b></font></legend>
-        <form data-th-action="@{/player/add}" name="addPlayerForm" method="post">
-            Name: <input type="text" name="name" /><br /><br />
-            Team: <input type="text" name="team" /><br /><br />
-            Player Level:<br />
-            <input type="radio" name="playerLevel" value="NFL" checked="checked" /> NFL<br />
-            <input type="radio" name="playerLevel" value="CFL" /> CFL<br />
-            <input type="radio" name="playerLevel" value="College" /> College<br />
-            <input type="radio" name="playerLevel" value="Other" /> Other<br />
-            <input type="submit" value="Add Player"/>
+        <legend><font size="+1"><b>Add Comment</b></font></legend>
+        <form data-th-action="@{/comment/add}" name="addCommentForm" method="post">
+            
+            Comment: <input type="text" name="post" /><br />
+           
+            Film Type:
+            <select id="Comment Type" name="CommentType">
+            <option value = "Player">Player</option>
+            <option value = "Team">Team</option>
+            <option value = "College">College</option>
+            <option value = "NFL">NFL</option>
+            <option value = "Other">Other</option>
+            </select>
+            <br />
+     
+            <input type="submit" value="Add"/>
         </form>
         </fieldset>
         <hr />       
-
+        
         <form data-th-action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
         </div>
-
-                    </div>
                 </div>
             </div>
         </div>
