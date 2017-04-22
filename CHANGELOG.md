@@ -7,6 +7,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
+## [v1.5] - 2017-04-22
+### Modified
+- Changed files in templet folder
+    - Modified all the html pages 
+    - Add bootstrap for all html pages to have a nicer appearance
+
+
 ## [v1.4.0] - 2017-03-25
 ### Added
 - New files in src folder
@@ -61,7 +68,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.5...HEAD
+[v1.5]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.4.0...v1.5
 [v1.4.0]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.3...v1.4.0
 [v1.3]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.2...v1.3
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-yas42/compare/v1.1...v1.2

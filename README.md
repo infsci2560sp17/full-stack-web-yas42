@@ -40,19 +40,24 @@
 
 * Enables users login
 * Enables users to add their highlight film to the database
-* Key Feature 3
+* Top navigation bar in home page and side navigation drawer in other pages
 
 ## Project Details
 
 ### Landing Page
 
-Simple Landing Page shows the users what content they will be able to see and to login.
 ![](/Screenshots/landing.JPG)
 
-### User Input Form
+### Home Page
 
-My User Input Form have 3 catagories, Film ID, Name and Film Type. Film 1,2,3 are in the system as default, while I added film 4, 5, 6 with success. 
-![](/Screenshots/UIF.JPG)
+After the user successfully login, he will be direct to the home page, where he can navigate to anywhere of the website 
+![](/Screenshots/home.JPG)
+
+### User Input Form with Navigation Drawer
+
+Example of Player Highlight page, where the user can put the information into the system.
+It also has a navigation drawer build in at the side which serves the same function as the top navigation bar in home page.
+![](/Screenshots/player.JPG)
 
 ## API
 
