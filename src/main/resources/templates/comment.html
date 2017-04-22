@@ -9,7 +9,7 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
 
-    <title>Film</title>
+    <title>Comment</title>
 <style type="text/css">
         table, td, th {    
         border: 1px solid #ddd;
@@ -109,6 +109,9 @@
                 <li>
                     <a data-th-href="@{/comment}">Comment</a>
                 </li>
+                <li>
+                    <a data-th-href="@{/login?logout}">Logout</a>
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -156,10 +159,6 @@
             <input type="submit" value="Add"/>
         </form>
         </fieldset>
-              
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
         </div>
 
                     </div>
